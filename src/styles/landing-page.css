@@ -158,7 +158,7 @@
   margin-bottom: var(--space-6);
   color: var(--color-accent);
   font-style: italic;
-  font-family: var(--font-serif);
+  font-family: var(--font-mono);
 }
 
 .hero-description {
@@ -201,6 +201,15 @@
   grid-template-columns: 2fr 1fr;
   gap: var(--space-12);
   align-items: start;
+}
+
+.story-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-text .section-title {
+  margin: 0 auto var(--space-8);
 }
 
 .section-title {
@@ -274,10 +283,16 @@
   background-color: var(--color-bg-card);
 }
 
+.how-it-works .container {
+  display: flex;
+  flex-direction: column;
+}
+
 .how-it-works .section-title {
   text-align: center;
   color: var(--color-text-inverse);
-  margin-bottom: var(--space-16);
+  margin: 0 auto var(--space-16);
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .steps-grid {
