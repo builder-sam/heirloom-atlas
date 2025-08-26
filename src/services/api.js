@@ -193,7 +193,8 @@ class EstatesalesAPI {
     if (this.useMockData) {
       // Use mock data for development
       let filteredSales = [...mockSalesData]
-      
+      console.log('Initial mock sales count:', filteredSales.length) // Debug log
+
       // Apply search query
       if (query) {
         filteredSales = filteredSales.filter(sale =>
@@ -201,16 +202,20 @@ class EstatesalesAPI {
           sale.address.toLowerCase().includes(query.toLowerCase()) ||
           sale.categories.some(cat => cat.toLowerCase().includes(query.toLowerCase()))
         )
+        console.log('After query filter:', filteredSales.length) // Debug log
       }
 
       // Apply filters
       const userLocation = latitude && longitude ? { latitude, longitude } : null
       filteredSales = filterSales(filteredSales, filters, userLocation)
+      console.log('After date/type/category filters:', filteredSales.length) // Debug log
 
       // Sort by distance if location provided
       if (userLocation) {
         filteredSales.sort((a, b) => (a.distance || 0) - (b.distance || 0))
       }
+
+      console.log('Final filtered sales:', filteredSales) // Debug log
 
       return {
         success: true,
