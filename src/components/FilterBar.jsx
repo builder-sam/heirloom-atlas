@@ -120,6 +120,40 @@ const FilterBar = ({ filters, onChange }) => {
                 {option.label}
               </button>
             ))}
+
+            {filters.dates === 'custom' && (
+              <div className="custom-date-range">
+                <div className="date-range-header">
+                  <span>Select Date Range</span>
+                </div>
+                <div className="date-inputs">
+                  <div className="date-input-group">
+                    <label>Start Date</label>
+                    <input
+                      type="date"
+                      value={customDateRange.startDate}
+                      onChange={(e) => updateCustomDateRange('startDate', e.target.value)}
+                      className="date-input"
+                    />
+                  </div>
+                  <div className="date-input-group">
+                    <label>End Date</label>
+                    <input
+                      type="date"
+                      value={customDateRange.endDate}
+                      onChange={(e) => updateCustomDateRange('endDate', e.target.value)}
+                      className="date-input"
+                      min={customDateRange.startDate}
+                    />
+                  </div>
+                </div>
+                {customDateRange.startDate && customDateRange.endDate && (
+                  <div className="date-range-summary">
+                    Range: {new Date(customDateRange.startDate).toLocaleDateString()} - {new Date(customDateRange.endDate).toLocaleDateString()}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </FilterPill>
 
