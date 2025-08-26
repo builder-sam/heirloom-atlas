@@ -35,10 +35,11 @@ const AboutPage = () => {
                 </p>
 
                 <p>
-                  After studying Art History at Boston University and apprenticing under master appraiser
+                  After studying Art History at Norwich University and apprenticing under master appraiser
                   Margaret Chen in Cambridge, Sam spent over fifteen years navigating the intricate world of
-                  estate sales, auctions, and antique markets. He developed an eye for recognizing not just
-                  valuable pieces, but items with soul—objects that tell stories of the families who cherished them.
+                  estate sales, auctions, and antique markets across New England before relocating to Brooklyn, New York.
+                  He developed an eye for recognizing not just valuable pieces, but items with soul—objects that tell
+                  stories of the families who cherished them.
                 </p>
 
                 <p>
@@ -53,11 +54,12 @@ const AboutPage = () => {
                   the provenance and emotional significance of pieces—from Georgian silver tea services to
                   mid-century modern furniture, from vintage costume jewelry to rare first edition books.
                   His approach combines scholarly knowledge with intuitive understanding of what makes an
-                  object truly special.
+                  object truly special. Now based in Brooklyn, Sam serves as an affiliated appraiser for the
+                  Smithsonian Institution, lending his expertise to key evaluations of significant historical pieces.
                 </p>
 
                 <p>
-                  The idea for Heirloom Atlas came during a particularly poignant estate sale in Salem, where
+                  The idea for Heirloom Atlas came during a particularly poignant estate sale in Park Slope, Brooklyn, where
                   Sam watched a young couple carefully select items that would start their own family traditions.
                   He realized that while technology had transformed how we find almost everything else,
                   discovering meaningful estate sales still relied on word-of-mouth and classified ads.
@@ -71,16 +73,18 @@ const AboutPage = () => {
                 </blockquote>
 
                 <p>
-                  Today, Sam continues to attend estate sales personally, both to source exceptional pieces
-                  for his private collection and to maintain his connection to the community that shaped him.
-                  His expertise in American furniture, European ceramics, and 20th-century design informs
+                  Today, from his Brooklyn base, Sam continues to attend estate sales personally throughout the
+                  tri-state area, both to source exceptional pieces for his private collection and to maintain
+                  his connection to the community that shaped him. His expertise in American furniture, European
+                  ceramics, and 20th-century design, honed through his work with the Smithsonian, informs
                   every aspect of Heirloom Atlas's approach to categorization and search functionality.
                 </p>
 
                 <p>
                   When he's not building Heirloom Atlas or exploring estate sales, Sam can be found restoring
-                  antique clocks in his workshop, volunteering at the local historical society, or sharing
-                  his knowledge through lectures at antique appreciation societies throughout New England.
+                  antique clocks in his Brooklyn workshop, volunteering with local historical preservation efforts,
+                  or sharing his knowledge through lectures at antique appreciation societies and museums
+                  throughout the Northeast corridor.
                 </p>
               </div>
             </div>
