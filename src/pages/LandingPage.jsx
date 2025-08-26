@@ -8,26 +8,26 @@ const ImageCarousel = () => {
   const slides = [
     {
       id: 1,
-      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2F5226d5c00d9d4fb7973cdedd19673b84?format=webp&width=800',
-      alt: 'Vintage copper pots and kitchen antiques',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2F17f083a45924467bb9332c218d29556d?format=webp&width=800',
+      alt: 'Beautiful collection of antique ceramic vases and pottery',
       caption: 'Discover timeless treasures'
     },
     {
       id: 2,
-      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2F7ec0e1f6e0984c3ea0eff4c2f02a8a73?format=webp&width=800',
-      alt: 'Antique ceramic vases and pottery collection',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2F8f87e36eae234ce7ac9809322d940626?format=webp&width=800',
+      alt: 'Elegant Victorian era parlor with period furniture and decor',
       caption: 'Every piece tells a story'
     },
     {
       id: 3,
-      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2Fabc1d99cb0424d65b296ccc272c858ab?format=webp&width=800',
-      alt: 'Estate sale treasures and vintage collectibles',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2Fa9a48a7e0fba456a96f92ef188a45820?format=webp&width=800',
+      alt: 'Vintage wooden chest of drawers with antique books',
       caption: 'Heirlooms of generations past'
     },
     {
       id: 4,
-      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2F3ed46efa616e4889bff6b3dfe09cc0d6?format=webp&width=800',
-      alt: 'Vintage wooden chest of drawers',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2F9e65f876a5b54fbea824a65a36bf0119?format=webp&width=800',
+      alt: 'Ornate antique decorative piece with intricate gold detailing',
       caption: 'Stories worth keeping'
     }
   ]
