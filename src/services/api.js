@@ -3,16 +3,31 @@
 
 // Mock data simulating EstateSales.NET API responses
 // Generate dates relative to current date to ensure they show up in filters
-const getCurrentDate = () => new Date()
-const getTomorrowDate = () => new Date(Date.now() + 24 * 60 * 60 * 1000)
+const getCurrentDate = () => {
+  const now = new Date()
+  console.log('Current date for mock data:', now.toISOString())
+  return now
+}
+const getTomorrowDate = () => {
+  const tomorrow = new Date(Date.now() + 24 * 60 * 60 * 1000)
+  console.log('Tomorrow date for mock data:', tomorrow.toISOString())
+  return tomorrow
+}
 const getWeekendDate = () => {
   const today = new Date()
   const daysUntilSaturday = (6 - today.getDay()) % 7 || 7 // Get next Saturday
-  return new Date(today.getTime() + daysUntilSaturday * 24 * 60 * 60 * 1000)
+  const weekend = new Date(today.getTime() + daysUntilSaturday * 24 * 60 * 60 * 1000)
+  console.log('Weekend date for mock data:', weekend.toISOString())
+  return weekend
 }
-const getNextWeekDate = () => new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+const getNextWeekDate = () => {
+  const nextWeek = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+  console.log('Next week date for mock data:', nextWeek.toISOString())
+  return nextWeek
+}
 
-const mockSalesData = [
+// Force regeneration of dates on each module load
+const generateMockSalesData = () => [
   {
     id: '1',
     title: 'Beautiful Victorian Estate Sale - Antiques & Fine Art',
@@ -103,6 +118,9 @@ const mockSalesData = [
   }
 ]
 
+// Generate fresh mock data
+const mockSalesData = generateMockSalesData()
+
 // Simulated API delay
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -191,9 +209,11 @@ class EstatesalesAPI {
     await delay(800) // Simulate API call
 
     if (this.useMockData) {
-      // Use mock data for development
-      let filteredSales = [...mockSalesData]
+      // Use mock data for development - regenerate fresh data each time
+      const freshMockData = generateMockSalesData()
+      let filteredSales = [...freshMockData]
       console.log('Initial mock sales count:', filteredSales.length) // Debug log
+      console.log('Mock sales data:', filteredSales.map(s => ({ id: s.id, title: s.title, date: s.date }))) // Debug log
 
       // Apply search query
       if (query) {
