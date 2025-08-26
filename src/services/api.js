@@ -155,7 +155,7 @@ const filterSales = (sales, filters, userLocation) => {
     const saleDate = new Date(sale.date)
     const today = new Date()
     const thisWeekend = new Date(today.getTime() + (6 - today.getDay()) * 24 * 60 * 60 * 1000)
-    
+
     switch (filters.dates) {
       case 'today':
         if (saleDate.toDateString() !== today.toDateString()) return false
@@ -166,6 +166,15 @@ const filterSales = (sales, filters, userLocation) => {
       case 'next_week':
         const nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000)
         if (saleDate < today || saleDate > nextWeek) return false
+        break
+      case 'custom':
+        if (filters.customDateRange && filters.customDateRange.startDate && filters.customDateRange.endDate) {
+          const startDate = new Date(filters.customDateRange.startDate)
+          const endDate = new Date(filters.customDateRange.endDate)
+          // Set end date to end of day for inclusive range
+          endDate.setHours(23, 59, 59, 999)
+          if (saleDate < startDate || saleDate > endDate) return false
+        }
         break
     }
 
