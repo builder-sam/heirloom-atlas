@@ -15,10 +15,11 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-heading">Links</h3>
             <nav className="footer-nav">
+              <Link to="/map" className="footer-link">Explore Sales</Link>
               <Link to="/about" className="footer-link">About</Link>
               <Link to="/saved" className="footer-link">Saved Sales</Link>
-              <a 
-                href="#data-sources" 
+              <a
+                href="#data-sources"
                 className="footer-link"
                 aria-label="Data sources information"
               >

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Heart, Info } from 'lucide-react'
+import { Heart, Info, Map } from 'lucide-react'
 
 const Header = () => {
   const location = useLocation()
-  const isHomePage = location.pathname === '/'
+  const isLandingPage = location.pathname === '/'
 
   return (
     <header className="header">
@@ -13,19 +13,23 @@ const Header = () => {
           <h1 className="logo-text text-serif">Heirloom Atlas</h1>
           <span className="tagline text-sans">Find stories worth keeping</span>
         </Link>
-        
-        {!isHomePage && (
-          <nav className="nav">
-            <Link to="/saved" className="nav-link" aria-label="Saved sales">
-              <Heart size={20} />
-              <span>Saved</span>
+
+        <nav className="nav">
+          {!isLandingPage && (
+            <Link to="/map" className="nav-link" aria-label="Explore estate sales">
+              <Map size={20} />
+              <span>Explore</span>
             </Link>
-            <Link to="/about" className="nav-link" aria-label="About">
-              <Info size={20} />
-              <span>About</span>
-            </Link>
-          </nav>
-        )}
+          )}
+          <Link to="/saved" className="nav-link" aria-label="Saved sales">
+            <Heart size={20} />
+            <span>Saved</span>
+          </Link>
+          <Link to="/about" className="nav-link" aria-label="About">
+            <Info size={20} />
+            <span>About</span>
+          </Link>
+        </nav>
       </div>
     </header>
   )
