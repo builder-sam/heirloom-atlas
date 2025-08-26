@@ -26,14 +26,38 @@ const FilterPill = ({ label, icon: Icon, isActive, onClick, children }) => {
 
 const FilterBar = ({ filters, onChange }) => {
   const [activeFilter, setActiveFilter] = useState(null)
+  const [customDateRange, setCustomDateRange] = useState({
+    startDate: '',
+    endDate: ''
+  })
 
   const toggleFilter = (filterName) => {
     setActiveFilter(activeFilter === filterName ? null : filterName)
   }
 
   const updateFilter = (key, value) => {
+    if (key === 'dates' && value === 'custom') {
+      // Don't close dropdown for custom dates - need to select range
+      onChange?.({ ...filters, [key]: value })
+      return
+    }
     onChange?.({ ...filters, [key]: value })
     setActiveFilter(null)
+  }
+
+  const updateCustomDateRange = (field, value) => {
+    const newRange = { ...customDateRange, [field]: value }
+    setCustomDateRange(newRange)
+
+    // Update filters with custom range when both dates are selected
+    if (newRange.startDate && newRange.endDate) {
+      onChange?.({
+        ...filters,
+        dates: 'custom',
+        customDateRange: newRange
+      })
+      setActiveFilter(null)
+    }
   }
 
   const updateCategories = (category) => {
