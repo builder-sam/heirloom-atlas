@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import '@/styles/globals.css'
 
 // Pages
-import HomePage from '@/pages/HomePage'
+import LandingPage from '@/pages/LandingPage'
+import MapPage from '@/pages/MapPage'
 import SaleDetailPage from '@/pages/SaleDetailPage'
 import SavedPage from '@/pages/SavedPage'
 import AboutPage from '@/pages/AboutPage'
@@ -16,7 +17,8 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/map" element={<MapPage />} />
           <Route path="/sale/:id" element={<SaleDetailPage />} />
           <Route path="/saved" element={<SavedPage />} />
           <Route path="/about" element={<AboutPage />} />
