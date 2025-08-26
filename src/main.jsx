@@ -5,6 +5,7 @@ import './styles/globals.css'
 import './styles/components.css'
 import './styles/pages.css'
 import './styles/map.css'
+import './styles/search-filter.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
