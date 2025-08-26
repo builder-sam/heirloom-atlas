@@ -2,12 +2,22 @@
 // This includes mock data for development and interfaces for real API integration
 
 // Mock data simulating EstateSales.NET API responses
+// Generate dates relative to current date to ensure they show up in filters
+const getCurrentDate = () => new Date()
+const getTomorrowDate = () => new Date(Date.now() + 24 * 60 * 60 * 1000)
+const getWeekendDate = () => {
+  const today = new Date()
+  const daysUntilSaturday = (6 - today.getDay()) % 7 || 7 // Get next Saturday
+  return new Date(today.getTime() + daysUntilSaturday * 24 * 60 * 60 * 1000)
+}
+const getNextWeekDate = () => new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+
 const mockSalesData = [
   {
     id: '1',
     title: 'Beautiful Victorian Estate Sale - Antiques & Fine Art',
-    date: '2024-08-30T09:00:00Z',
-    endDate: '2024-08-31T16:00:00Z',
+    date: getCurrentDate().toISOString(),
+    endDate: new Date(getCurrentDate().getTime() + 7 * 60 * 60 * 1000).toISOString(), // 7 hours later
     address: '123 Beacon Hill Street, Boston, MA 02108',
     latitude: 42.3584,
     longitude: -71.0598,
@@ -26,8 +36,8 @@ const mockSalesData = [
   {
     id: '2',
     title: 'Mid-Century Modern Collection - Designer Furniture',
-    date: '2024-08-31T10:00:00Z',
-    endDate: '2024-08-31T17:00:00Z',
+    date: getTomorrowDate().toISOString(),
+    endDate: new Date(getTomorrowDate().getTime() + 7 * 60 * 60 * 1000).toISOString(),
     address: '456 Cambridge Street, Cambridge, MA 02139',
     latitude: 42.3736,
     longitude: -71.1097,
@@ -44,8 +54,8 @@ const mockSalesData = [
   {
     id: '3',
     title: 'Tool Collector\'s Dream - Vintage & Antique Tools',
-    date: '2024-09-01T08:00:00Z',
-    endDate: '2024-09-01T15:00:00Z',
+    date: getWeekendDate().toISOString(),
+    endDate: new Date(getWeekendDate().getTime() + 7 * 60 * 60 * 1000).toISOString(),
     address: '789 Salem Street, Medford, MA 02155',
     latitude: 42.4184,
     longitude: -71.1061,
@@ -60,8 +70,8 @@ const mockSalesData = [
   {
     id: '4',
     title: 'Online Auction - Fine Jewelry & Watches',
-    date: '2024-09-02T18:00:00Z',
-    endDate: '2024-09-02T21:00:00Z',
+    date: getWeekendDate().toISOString(),
+    endDate: new Date(getWeekendDate().getTime() + 3 * 60 * 60 * 1000).toISOString(),
     address: 'Online Only',
     latitude: 42.3601,
     longitude: -71.0589,
@@ -78,8 +88,8 @@ const mockSalesData = [
   {
     id: '5',
     title: 'Country Home Estate - Furniture & Home Decor',
-    date: '2024-09-07T09:00:00Z',
-    endDate: '2024-09-08T16:00:00Z',
+    date: getNextWeekDate().toISOString(),
+    endDate: new Date(getNextWeekDate().getTime() + 2 * 24 * 60 * 60 * 1000).toISOString(), // 2 day sale
     address: '321 Main Street, Concord, MA 01742',
     latitude: 42.4606,
     longitude: -71.3489,
