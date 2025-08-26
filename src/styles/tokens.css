@@ -19,7 +19,8 @@
   
   /* Typography Scale */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-brand: 'Playfair Display', Georgia, serif;
+  --font-brand: 'Aboreto', display;
+  --font-mono: 'Major Mono Display', monospace;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   
   --text-xs: 0.75rem;     /* 12px */
