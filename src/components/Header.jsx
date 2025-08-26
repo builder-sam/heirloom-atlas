@@ -11,7 +11,11 @@ const Header = () => {
       <div className="header-container">
         <Link to="/" className="logo">
           <h1 className="logo-text">Heirloom Atlas</h1>
-          <span className="tagline text-sans">Find stories worth keeping</span>
+          <span className="tagline text-sans">
+            <p>
+              <br />
+            </p>
+          </span>
         </Link>
 
         <nav className="nav">
