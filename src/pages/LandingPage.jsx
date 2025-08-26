@@ -138,7 +138,7 @@ const LandingPage = () => {
                 <blockquote className="founder-quote">
                   "Every antique is a time capsule, holding within it the essence of the era it represents. 
                   Our mission is to help these stories find their next chapter."
-                  <cite>— Sam Weiner, Founder</cite>
+                  <cite>— Sam Weiner, <span style={{fontWeight: 'normal', color: 'rgb(239, 234, 226)'}}>Founder</span></cite>
                 </blockquote>
               </div>
             </div>
@@ -164,7 +164,7 @@ const LandingPage = () => {
       {/* How It Works Section */}
       <section className="how-it-works">
         <div className="container">
-          <h2 className="section-title brand">How Heirloom Atlas Works</h2>
+          <h2 className="section-title brand"><h1>How Heirloom Atlas Works</h1></h2>
           <div className="steps-grid">
             <div className="step-item">
               <div className="step-icon">
