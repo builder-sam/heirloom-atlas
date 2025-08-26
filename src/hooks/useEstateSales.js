@@ -15,8 +15,10 @@ export const useEstateSales = () => {
 
     try {
       const response = await api.searchSales(searchParams)
-      
+      console.log('API response:', response) // Debug log
+
       if (response.success) {
+        console.log('Setting sales:', response.data.length, 'sales') // Debug log
         setSales(response.data)
       } else {
         setError(response.error || 'Failed to load estate sales')
