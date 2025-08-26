@@ -12,7 +12,8 @@ const MapPage = () => {
     distance: 25,
     type: 'all',
     priceRange: 'all',
-    categories: []
+    categories: [],
+    customDateRange: null
   })
   const [showSalesList, setShowSalesList] = useState(false)
   const [mapCenter, setMapCenter] = useState([42.3601, -71.0589]) // Default to Boston
