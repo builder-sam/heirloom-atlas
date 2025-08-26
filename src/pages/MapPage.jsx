@@ -23,6 +23,12 @@ const MapPage = () => {
   const { location, getCurrentLocation, geocodeAddress } = useGeolocation()
   const { savedSales, toggleSave } = useSavedSales()
 
+  // Debug logging
+  console.log('MapPage - Sales count:', sales.length)
+  console.log('MapPage - Sales data:', sales)
+  console.log('MapPage - Loading:', loading)
+  console.log('MapPage - Error:', error)
+
   // Initial load - search with default location and filters
   useEffect(() => {
     const initialSearch = {
