@@ -173,6 +173,12 @@ const filterSales = (sales, filters, userLocation) => {
           const endDate = new Date(filters.customDateRange.endDate)
           // Set end date to end of day for inclusive range
           endDate.setHours(23, 59, 59, 999)
+          console.log('Custom date filter:', {
+            saleDate: saleDate.toISOString(),
+            startDate: startDate.toISOString(),
+            endDate: endDate.toISOString(),
+            included: !(saleDate < startDate || saleDate > endDate)
+          })
           if (saleDate < startDate || saleDate > endDate) return false
         }
         break
