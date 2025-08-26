@@ -8,33 +8,27 @@ const ImageCarousel = () => {
   const slides = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=800&fit=crop',
-      alt: 'Vintage antique furniture collection',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2F5226d5c00d9d4fb7973cdedd19673b84?format=webp&width=800',
+      alt: 'Vintage copper pots and kitchen antiques',
       caption: 'Discover timeless treasures'
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1524634126442-357e0eac3c14?w=1200&h=800&fit=crop',
-      alt: 'Elegant vintage porcelain and china',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2F7ec0e1f6e0984c3ea0eff4c2f02a8a73?format=webp&width=800',
+      alt: 'Antique ceramic vases and pottery collection',
       caption: 'Every piece tells a story'
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1200&h=800&fit=crop',
-      alt: 'Fine vintage jewelry and accessories',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2Fabc1d99cb0424d65b296ccc272c858ab?format=webp&width=800',
+      alt: 'Estate sale treasures and vintage collectibles',
       caption: 'Heirlooms of generations past'
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=800&fit=crop',
-      alt: 'Classic vintage books and collectibles',
+      image: 'https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2F3ed46efa616e4889bff6b3dfe09cc0d6?format=webp&width=800',
+      alt: 'Vintage wooden chest of drawers',
       caption: 'Stories worth keeping'
-    },
-    {
-      id: 5,
-      image: 'https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=1200&h=800&fit=crop',
-      alt: 'Beautiful vintage home decor',
-      caption: 'Find your perfect piece'
     }
   ]
 
