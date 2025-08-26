@@ -164,7 +164,7 @@ const LandingPage = () => {
       {/* How It Works Section */}
       <section className="how-it-works">
         <div className="container">
-          <h2 className="section-title brand"><h1>How Heirloom Atlas Works</h1></h2>
+          <h2 className="section-title brand">How Heirloom Atlas Works</h2>
           <div className="steps-grid">
             <div className="step-item">
               <div className="step-icon">
