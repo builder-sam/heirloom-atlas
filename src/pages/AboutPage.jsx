@@ -19,7 +19,7 @@ const AboutPage = () => {
           <div className="founder-content">
             <div className="founder-image">
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+                src="https://cdn.builder.io/api/v1/image/assets%2Ff5acb1ddb2664353886858c058489217%2Fa2e1493b8d3f4d70a0cbfd63890cebb7?format=webp&width=400"
                 alt="Sam Weiner, Founder of Heirloom Atlas"
               />
             </div>
