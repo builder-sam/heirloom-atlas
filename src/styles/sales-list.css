@@ -129,9 +129,8 @@
 .save-btn {
   background: transparent;
   border: none;
-  padding: var(--space-2);
-  border-radius: var(--radius-sm);
-  color: var(--color-clay);
+  padding: var(--space-1);
+  color: #ccc;
   cursor: pointer;
   transition: all var(--transition-fast);
   display: flex;
@@ -142,12 +141,12 @@
 }
 
 .save-btn:hover {
-  color: var(--color-accent);
-  background-color: rgba(201, 168, 106, 0.1);
+  color: #ff6b6b;
+  transform: scale(1.1);
 }
 
 .save-btn.saved {
-  color: var(--color-accent);
+  color: #dc2626;
 }
 
 .sale-card-link {

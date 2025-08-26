@@ -82,7 +82,6 @@
   background: transparent;
   border: none;
   padding: var(--space-2);
-  border-radius: var(--radius-sm);
   color: var(--color-clay);
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -95,7 +94,7 @@
 
 .remove-btn:hover {
   color: #dc2626;
-  background-color: rgba(220, 38, 38, 0.1);
+  transform: scale(1.1);
 }
 
 .saved-card-link {
