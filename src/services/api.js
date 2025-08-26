@@ -332,4 +332,4 @@ class EstatesalesAPI {
 }
 
 // Export singleton instance
-export default new EstatealesAPI()
+export default new EstatesalesAPI()
