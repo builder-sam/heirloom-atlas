@@ -337,21 +337,108 @@ class EstatesalesAPI {
     // - Mapbox Geocoding API
     // - Google Geocoding API
     // - OpenStreetMap Nominatim
-    
+
     await delay(300)
-    
-    // Mock geocoding for common cities
+
+    console.log('Geocoding address:', address) // Debug log
+
+    // Mock geocoding for common cities and zip codes
     const mockGeocoding = {
+      // Cities
       'boston': { latitude: 42.3601, longitude: -71.0589 },
       'cambridge': { latitude: 42.3736, longitude: -71.1097 },
       'somerville': { latitude: 42.3876, longitude: -71.0995 },
       'newton': { latitude: 42.3370, longitude: -71.2092 },
-      'brookline': { latitude: 42.3317, longitude: -71.1211 }
+      'brookline': { latitude: 42.3317, longitude: -71.1211 },
+      'medford': { latitude: 42.4184, longitude: -71.1061 },
+      'concord': { latitude: 42.4606, longitude: -71.3489 },
+      'watertown': { latitude: 42.3668, longitude: -71.1834 },
+      'arlington': { latitude: 42.4162, longitude: -71.1564 },
+      'belmont': { latitude: 42.3959, longitude: -71.1786 },
+
+      // Boston area zip codes
+      '02108': { latitude: 42.3584, longitude: -71.0598 }, // Beacon Hill
+      '02109': { latitude: 42.3647, longitude: -71.0542 }, // North End
+      '02110': { latitude: 42.3584, longitude: -71.0598 }, // Financial District
+      '02111': { latitude: 42.3505, longitude: -71.0621 }, // Chinatown
+      '02113': { latitude: 42.3647, longitude: -71.0542 }, // North End
+      '02114': { latitude: 42.3584, longitude: -71.0598 }, // Beacon Hill
+      '02115': { latitude: 42.3467, longitude: -71.0972 }, // Back Bay
+      '02116': { latitude: 42.3505, longitude: -71.0621 }, // Back Bay
+      '02118': { latitude: 42.3396, longitude: -71.0720 }, // South End
+      '02119': { latitude: 42.3296, longitude: -71.0833 }, // Roxbury
+      '02120': { latitude: 42.3296, longitude: -71.0833 }, // Mission Hill
+      '02121': { latitude: 42.3182, longitude: -71.0856 }, // Dorchester
+      '02122': { latitude: 42.2793, longitude: -71.0569 }, // Dorchester
+      '02124': { latitude: 42.2927, longitude: -71.0569 }, // Dorchester
+      '02125': { latitude: 42.3182, longitude: -71.0856 }, // Dorchester
+      '02127': { latitude: 42.3396, longitude: -71.0469 }, // South Boston
+      '02128': { latitude: 42.3884, longitude: -71.0275 }, // East Boston
+      '02129': { latitude: 42.3884, longitude: -71.0694 }, // Charlestown
+      '02130': { latitude: 42.3209, longitude: -71.1175 }, // Jamaica Plain
+      '02131': { latitude: 42.3010, longitude: -71.1225 }, // Roslindale
+      '02132': { latitude: 42.2793, longitude: -71.1569 }, // West Roxbury
+      '02134': { latitude: 42.3534, longitude: -71.1356 }, // Allston
+      '02135': { latitude: 42.3534, longitude: -71.1278 }, // Brighton
+      '02136': { latitude: 42.2704, longitude: -71.1275 }, // Hyde Park
+      '02139': { latitude: 42.3736, longitude: -71.1097 }, // Cambridge
+      '02140': { latitude: 42.3736, longitude: -71.1097 }, // Cambridge
+      '02141': { latitude: 42.3736, longitude: -71.1097 }, // Cambridge
+      '02142': { latitude: 42.3656, longitude: -71.0956 }, // Cambridge
+      '02143': { latitude: 42.3876, longitude: -71.0995 }, // Somerville
+      '02144': { latitude: 42.3876, longitude: -71.0995 }, // Somerville
+      '02145': { latitude: 42.3876, longitude: -71.0995 }, // Somerville
+      '02146': { latitude: 42.3317, longitude: -71.1211 }, // Brookline
+      '02147': { latitude: 42.3317, longitude: -71.1211 }, // Brookline
+      '02148': { latitude: 42.4037, longitude: -70.9920 }, // Malden
+      '02149': { latitude: 42.4008, longitude: -71.0903 }, // Everett
+      '02150': { latitude: 42.4037, longitude: -70.9920 }, // Chelsea
+      '02151': { latitude: 42.4037, longitude: -70.9787 }, // Revere
+      '02152': { latitude: 42.4240, longitude: -70.9495 }, // Winthrop
+      '02153': { latitude: 42.4184, longitude: -71.1061 }, // Medford
+      '02154': { latitude: 42.4184, longitude: -71.1061 }, // Medford
+      '02155': { latitude: 42.4184, longitude: -71.1061 }, // Medford
+      '02156': { latitude: 42.4184, longitude: -71.1061 }, // Medford
+      '02158': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02159': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02160': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02161': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02162': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02163': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02164': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02165': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02166': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02167': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02168': { latitude: 42.3370, longitude: -71.2092 }, // Newton
+      '02169': { latitude: 42.2681, longitude: -71.0611 }, // Quincy
+      '02170': { latitude: 42.2681, longitude: -71.0611 }, // Quincy
+      '02171': { latitude: 42.2681, longitude: -71.0611 }, // Quincy
+      '02172': { latitude: 42.3668, longitude: -71.1834 }, // Watertown
+      '02173': { latitude: 42.3237, longitude: -71.2092 }, // Lexington
+      '02174': { latitude: 42.4162, longitude: -71.1564 }, // Arlington
+      '02175': { latitude: 42.4162, longitude: -71.1564 }, // Arlington
+      '02176': { latitude: 42.4162, longitude: -71.1564 }, // Arlington
+      '02177': { latitude: 42.4184, longitude: -71.1061 }, // Medford
+      '02178': { latitude: 42.3959, longitude: -71.1786 }, // Belmont
+      '01742': { latitude: 42.4606, longitude: -71.3489 }  // Concord
     }
 
-    const normalizedAddress = address.toLowerCase()
-    for (const [city, coords] of Object.entries(mockGeocoding)) {
-      if (normalizedAddress.includes(city)) {
+    const normalizedAddress = address.toLowerCase().trim()
+    console.log('Normalized address:', normalizedAddress) // Debug log
+
+    // First try exact zip code match
+    if (mockGeocoding[normalizedAddress]) {
+      console.log('Found exact zip code match:', mockGeocoding[normalizedAddress]) // Debug log
+      return {
+        success: true,
+        data: mockGeocoding[normalizedAddress]
+      }
+    }
+
+    // Then try city name match
+    for (const [key, coords] of Object.entries(mockGeocoding)) {
+      if (normalizedAddress.includes(key)) {
+        console.log('Found city name match:', key, coords) // Debug log
         return {
           success: true,
           data: coords
@@ -359,6 +446,7 @@ class EstatesalesAPI {
       }
     }
 
+    console.log('No geocoding match found for:', address) // Debug log
     return {
       success: false,
       error: 'Address not found'
