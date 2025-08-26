@@ -33,7 +33,7 @@ const HomePage = () => {
       filters
     }
     searchSales(initialSearch)
-  }, []) // Only run on mount
+  }, [searchSales]) // Include searchSales dependency
 
   // Update search when filters change
   useEffect(() => {
@@ -45,8 +45,9 @@ const HomePage = () => {
       query: searchQuery,
       filters
     }
+    console.log('Searching with params:', searchParams) // Debug log
     searchSales(searchParams)
-  }, [filters, location])
+  }, [filters, location, searchSales])
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return
