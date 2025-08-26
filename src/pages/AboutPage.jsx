@@ -8,7 +8,7 @@ const AboutPage = () => {
       <div className="container">
         {/* Hero Section */}
         <div className="about-hero">
-          <h1 className="page-title text-serif">About Heirloom Atlas</h1>
+          <h1 className="page-title">About Heirloom Atlas</h1>
           <p className="page-subtitle">
             Every treasure has a story. We help you find the ones worth keeping.
           </p>
@@ -25,7 +25,7 @@ const AboutPage = () => {
             </div>
 
             <div className="founder-story">
-              <h2 className="text-serif">Meet Sam Weiner, Founder</h2>
+              <h2 className="section-title brand">Meet Sam Weiner, Founder</h2>
               <div className="founder-bio">
                 <p>
                   Sam Weiner's love affair with antiques began in his grandmother's attic at age eight,
@@ -89,7 +89,7 @@ const AboutPage = () => {
 
         {/* Mission Section */}
         <section className="mission-section">
-          <h2 className="section-title text-serif">Our Mission</h2>
+          <h2 className="section-title brand">Our Mission</h2>
           <div className="mission-content">
             <p>
               Heirloom Atlas exists to bridge the gap between treasure hunters and the stories waiting
@@ -122,7 +122,7 @@ const AboutPage = () => {
 
         {/* How It Works */}
         <section className="how-it-works-about">
-          <h2 className="section-title text-serif">How Heirloom Atlas Works</h2>
+          <h2 className="section-title brand">How Heirloom Atlas Works</h2>
           <div className="about-content">
             <p>
               Our platform makes discovering estate sales as simple as finding a restaurant.
@@ -141,7 +141,7 @@ const AboutPage = () => {
 
         {/* Data Sources */}
         <section className="data-sources">
-          <h2 className="section-title text-serif">Data Sources & Ethics</h2>
+          <h2 className="section-title brand">Data Sources & Ethics</h2>
           <div className="about-content">
             <p>
               Estate sale data is provided by EstateSales.NET and other official sources.
@@ -160,7 +160,7 @@ const AboutPage = () => {
         {/* CTA */}
         <section className="about-cta">
           <div className="cta-content">
-            <h2 className="text-serif">Ready to Start Your Treasure Hunt?</h2>
+            <h2 className="cta-title">Ready to Start Your Treasure Hunt?</h2>
             <p>
               Join thousands of collectors who trust Heirloom Atlas to guide them to
               the stories worth keeping.

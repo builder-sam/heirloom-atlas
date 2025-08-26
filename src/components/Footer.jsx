@@ -31,7 +31,7 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © 2024 Heirloom Atlas. Built with care for collectors and treasure hunters.
+            © 2024 <span className="footer-brand">Heirloom Atlas</span>. Built with care for collectors and treasure hunters.
           </p>
           <p className="footer-attribution">
             Estate sale data provided by EstateSales.NET

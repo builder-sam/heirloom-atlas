@@ -98,7 +98,7 @@ const LandingPage = () => {
         <ImageCarousel />
         <div className="hero-content">
           <div className="hero-text">
-            <h1 className="hero-title text-serif">Heirloom Atlas</h1>
+            <h1 className="hero-title">Heirloom Atlas</h1>
             <p className="hero-tagline">Find stories worth keeping</p>
             <p className="hero-description">
               Discover nearby estate sales, auctions, and antique liquidations. 
@@ -123,7 +123,7 @@ const LandingPage = () => {
         <div className="container">
           <div className="story-content">
             <div className="story-text">
-              <h2 className="section-title text-serif">Every Treasure Has a Story</h2>
+              <h2 className="section-title brand">Every Treasure Has a Story</h2>
               <div className="story-paragraphs">
                 <p>
                   In a world that moves increasingly fast, we believe in the enduring value of things 
@@ -170,7 +170,7 @@ const LandingPage = () => {
       {/* How It Works Section */}
       <section className="how-it-works">
         <div className="container">
-          <h2 className="section-title text-serif">How Heirloom Atlas Works</h2>
+          <h2 className="section-title brand">How Heirloom Atlas Works</h2>
           <div className="steps-grid">
             <div className="step-item">
               <div className="step-icon">
@@ -203,7 +203,7 @@ const LandingPage = () => {
       <section className="cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2 className="cta-title text-serif">Ready to Find Your Next Treasure?</h2>
+            <h2 className="cta-title">Ready to Find Your Next Treasure?</h2>
             <p className="cta-description">
               Join thousands of collectors and antique enthusiasts who trust Heirloom Atlas 
               to guide them to the stories worth keeping.
