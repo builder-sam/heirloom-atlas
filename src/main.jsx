@@ -7,6 +7,7 @@ import './styles/pages.css'
 import './styles/map.css'
 import './styles/search-filter.css'
 import './styles/sales-list.css'
+import './styles/sale-detail.css'
 import './styles/notifications.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
